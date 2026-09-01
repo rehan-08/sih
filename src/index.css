@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg: #F9F7F2;
+    --ink: #1A1A1A;
+    --accent: #BC412B;
+    --card: #FFFFFF;
+    --paper-tint: #F4F0E8;
+    --paper-border: #DDD8CE;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color-scheme: light;
+  }
+
+  html.dark,
+  body.dark,
+  :root.dark,
+  [data-theme='dark'] {
+    --bg: #0B1117;
+    --ink: #E8ECE9;
+    --accent: #E05A42;
+    --card: #101820;
+    --paper-tint: #16202C;
+    --paper-border: #1F2E3E;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', 'Newsreader', 'Georgia', serif;
+}
+
+.font-display {
+  font-family: 'Playfair Display', 'Cinzel', 'Georgia', serif;
+}
+
+.font-serif-body {
+  font-family: 'Newsreader', 'Georgia', serif;
+}
+
+.font-mono-data {
+  font-family: 'JetBrains Mono', 'Inter', monospace;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+/* Custom scrollbars - Editorial tactile style */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9F7F2;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0B1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DDD8CE;
+  border-radius: 3px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1F2E3E;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BC412B;
+}
+
+/* Editorial subtle paper grid */
+.maritime-grid {
+  background-image: 
+    linear-gradient(to right, rgba(26, 26, 26, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 26, 26, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+html.dark .maritime-grid {
+  background-image: 
+    linear-gradient(to right, rgba(232, 236, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(232, 236, 233, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.editorial-shadow {
+  box-shadow: 0 4px 20px -2px rgba(26, 26, 26, 0.05), 0 2px 6px -1px rgba(26, 26, 26, 0.03);
+}
+
+html.dark .editorial-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.editorial-shadow-lg {
+  box-shadow: 0 10px 30px -4px rgba(26, 26, 26, 0.08), 0 4px 12px -2px rgba(26, 26, 26, 0.04);
+}
+
+html.dark .editorial-shadow-lg {
+  box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.6), 0 4px 12px -2px rgba(0, 0, 0, 0.4);
+}
+
+
+
