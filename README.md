@@ -87,21 +87,6 @@ feeds without an architecture change.
 
 **Prerequisites:** Node.js 18+
 
-```bash
-npm install
-npm run dev
-```
-
-Then open **http://localhost:3000**.
-
-Other scripts:
-
-```bash
-npm run build   # production build
-npm run preview # preview the production build
-npm run lint    # type-check (tsc --noEmit)
-```
-
 ## 📁 Project structure
 
 ```
