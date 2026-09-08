@@ -6,3 +6,4 @@ coverage/
 *.log
 .env*
 !.env.example
+marlin_chartering_report_*.json
